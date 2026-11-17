@@ -17,7 +17,7 @@ services:
       - key: PORT
         value: "10000"
 
-# --- equipo ---  (generado por tools/equipo-cowork.py; las contraseñas se piden al aplicar el Blueprint)
+# --- equipo ---  (generado por tools/equipo-cowork.py; Render genera cada contraseña; se leen en el panel y se guardan con el comando «claves»)
   - type: web
     name: ocm-sara-9457
     runtime: docker
@@ -27,7 +27,7 @@ services:
     autoDeployTrigger: commit
     envVars:
       - key: OPENCODE_SERVER_PASSWORD
-        sync: false
+        generateValue: true
       - key: OPENCODE_PORT
         value: "10000"
       - key: PORT
@@ -41,7 +41,7 @@ services:
     autoDeployTrigger: commit
     envVars:
       - key: OPENCODE_SERVER_PASSWORD
-        sync: false
+        generateValue: true
       - key: OPENCODE_PORT
         value: "10000"
       - key: PORT
@@ -55,7 +55,7 @@ services:
     autoDeployTrigger: commit
     envVars:
       - key: OPENCODE_SERVER_PASSWORD
-        sync: false
+        generateValue: true
       - key: OPENCODE_PORT
         value: "10000"
       - key: PORT
