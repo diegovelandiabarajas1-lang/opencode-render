@@ -7,4 +7,8 @@ ENV OPENCODE_HOSTNAME=0.0.0.0 \
     OPENCODE_PORT=10000
 WORKDIR /workspace
 COPY workspace/ /workspace/
+# Guardián: mantiene despierto a Render mientras un agente trabaja (aunque nadie envíe mensajes).
+COPY mantener-despierto.sh arranque.sh /
+RUN chmod 0755 /mantener-despierto.sh /arranque.sh
+ENTRYPOINT ["/arranque.sh"]
 EXPOSE 10000
