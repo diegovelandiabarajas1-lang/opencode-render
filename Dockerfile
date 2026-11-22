@@ -11,4 +11,7 @@ COPY workspace/ /workspace/
 COPY mantener-despierto.sh arranque.sh /
 RUN chmod 0755 /mantener-despierto.sh /arranque.sh /workspace/herramientas/*.sh
 ENTRYPOINT ["/arranque.sh"]
+# CORS: deja que la PWA de iPhone (https://diegovelandiabarajas1-lang.github.io) hable con este servidor.
+# Sin esto el navegador la bloquea. La imagen reenvía estos argumentos a «opencode web».
+CMD ["--cors", "https://diegovelandiabarajas1-lang.github.io"]
 EXPOSE 10000
