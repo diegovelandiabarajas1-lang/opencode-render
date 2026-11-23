@@ -1,4 +1,6 @@
-# OpenCode en Render (plan gratuito)
+# OpenCode en Render (plan gratuito) — servicio heredado
+
+> El motor oficial de Wichi es **Wichinion** (ver `../wichinion-render/LEEME.md`). Este servicio con OpenCode se conserva solo como referencia histórica y por compatibilidad con la app móvil existente.
 
 Contiene solo lo necesario para que Render levante el servidor de OpenCode para la app OpenCode Móvil:
 - `Dockerfile`: imagen mínima (parte de `smanx/opencode`), puerto 10000.
